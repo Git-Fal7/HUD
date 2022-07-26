@@ -1,0 +1,83 @@
+/**
+ * mate-hud-rounded rofi theme (rounded corners)
+ * Incomplete theme designed to have certain properties applied at mate-hud runtime
+ * Don't use this for anything else than mate-hud
+ * Adapted by twa022 <twa022 at gmail dot com>
+ */
+
+configuration {
+    font: "Sans Regular 10";
+}
+
+* {
+    backlight:   #ccffeedd;
+    background-color:  transparent;
+}
+
+window {
+    location: center;
+    width: 50%;
+    transparency: "screenshot";
+    border:  1px;
+    border-radius: 6px;
+
+    spacing: 0;
+    children:  [mainbox];
+    orientation: horizontal;
+
+    margin: 12px 12px;
+
+    font: "Sans Regular 10";
+    border-color: {@theme_selected_bg_color};
+}
+
+mainbox {
+    spacing: 0;
+    children: [ inputbar, message, listview ];
+}
+
+inputbar {
+    text-color: {@theme_text_color};
+    padding: 11px;
+    background-color: {@theme_bg_color};
+    border: 1px;
+    border-radius:  6px 6px 0px 0px;
+    border-color: {@theme_bg_color};
+}
+
+entry, prompt, case-indicator {
+    text-font: inherit;
+    text-color:inherit;
+}
+
+prompt {
+    margin: 0px 0.3em 0em 0em ;
+}
+
+listview {
+    padding: 8px;
+    border-radius: 0px 0px 6px 6px;
+    border: 0px 1px 1px 1px;
+
+    background-color: {@theme_bg_color};
+
+    dynamic: false;
+    font: "Sans Regular 10";
+}
+
+element {
+    padding: 3px;
+    vertical-align: 0.5;
+    border-radius: 4px;
+    background-color: transparent;
+    text-color: {@theme_text_color};
+}
+
+element selected.normal {
+    background-color: {@theme_selected_bg_color};
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
